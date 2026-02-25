@@ -1,0 +1,20 @@
+
+.programs-hero{
+  background:var(--bg-secondary);
+}
+
+.programs-hero__inner{
+  max-width:760px;
+  margin:auto;
+}
+
+.programs-hero__tag{
+  font-size:12px;
+  letter-spacing:3px;
+  color:var(--accent);
+  margin-bottom:18px;
+}
+
+.programs-hero__inner h1{
+  margin-bottom:18px;
+}

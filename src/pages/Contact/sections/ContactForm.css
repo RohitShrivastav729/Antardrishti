@@ -1,0 +1,62 @@
+
+.contact-form{
+  background:#fff;
+}
+
+.contact-form__grid{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:70px;
+}
+
+.form{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-top:20px;
+}
+
+.form input,
+.form textarea{
+  width:100%;
+  padding:14px 16px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  font-family:inherit;
+  box-sizing:border-box;   /* IMPORTANT */
+}
+
+.contact-card{
+  background:var(--bg-primary);
+  padding:35px 30px;
+  border-radius:16px;
+  margin-bottom:20px;
+}
+
+.whatsapp-btn{
+  display:inline-block;
+  margin-top:12px;
+  background:#25D366;
+  color:#fff;
+  padding:12px 22px;
+  border-radius:6px;
+}
+
+
+.phone-group{
+  display:flex;
+  gap:10px;
+  width:100%;
+}
+
+.phone-group select{
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  background:#fff;
+  box-sizing:border-box;
+}
+
+.phone-group input{
+  flex:1;
+}

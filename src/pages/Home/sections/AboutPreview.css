@@ -1,0 +1,37 @@
+
+.about-preview{
+  background:var(--bg-secondary);
+}
+
+.about-preview__grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+
+.about-preview__left img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.05),
+    0 10px 30px rgba(0,0,0,0.03);
+}
+
+.about-preview__tag{
+  font-size:12px;
+  letter-spacing:3px;
+  color:var(--accent);
+  margin-bottom:18px;
+}
+
+.about-preview__right h2{
+  font-size:42px;
+  line-height:1.2;
+  margin-bottom:22px;
+}
+
+.about-preview__right p{
+  margin-bottom:18px;
+  max-width:520px;
+}

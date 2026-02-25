@@ -1,0 +1,23 @@
+
+.experience{
+  background:#fff;
+}
+
+.experience__grid{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+
+.experience__card{
+  background:var(--bg-primary);
+  padding:40px 20px;
+  text-align:center;
+  border-radius:16px;
+}
+
+.experience__card h3{
+  font-size:26px;
+  margin-bottom:8px;
+}

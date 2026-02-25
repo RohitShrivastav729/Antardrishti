@@ -1,0 +1,16 @@
+
+.philosophy__lead{
+  max-width:720px;
+  margin:20px auto 60px auto;
+}
+
+.philosophy__grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:50px;
+  text-align:center;
+}
+
+.philosophy__grid h4{
+  margin-bottom:10px;
+}

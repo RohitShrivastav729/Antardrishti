@@ -1,0 +1,20 @@
+
+.corp-hero{
+  background:var(--bg-secondary);
+}
+
+.corp-hero__inner{
+  max-width:760px;
+  margin:auto;
+}
+
+.corp-hero__tag{
+  font-size:12px;
+  letter-spacing:3px;
+  color:var(--accent);
+  margin-bottom:18px;
+}
+
+.innerParagraph{
+    padding-top: 10px;
+}

@@ -1,0 +1,21 @@
+:root{
+
+  /* colors */
+  --bg-primary:#F7F6F2;
+  --bg-secondary:#EFECE6;
+  --accent:#6F7D6A;
+  --gold:#C6A769;
+  --text-dark:#1F1F1F;
+  --text-light:#6B6B6B;
+
+  /* layout */
+  --container:1200px;
+  --section-space:120px;
+
+  /* radius */
+  --radius-sm:6px;
+  --radius-md:10px;
+
+  /* transitions */
+  --transition: all .35s ease;
+}

@@ -1,0 +1,28 @@
+
+.btn{
+  padding:16px 32px;
+  font-size:14px;
+  letter-spacing:.5px;
+  cursor:pointer;
+  display:inline-block;
+  transition:var(--transition);
+}
+
+.btn-primary{
+  background:var(--gold);
+  color:#fff;
+}
+
+.btn-primary:hover{
+  opacity:.9;
+}
+
+.btn-outline{
+  border:1px solid #000;
+  color:#000;
+}
+
+.btn-outline:hover{
+  background:#000;
+  color:#fff;
+}

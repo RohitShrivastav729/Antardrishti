@@ -1,0 +1,43 @@
+
+.audience{
+  background:#fff;
+}
+
+.audience__header{
+  max-width:700px;
+  margin:auto;
+  margin-bottom:70px;
+}
+
+.audience__tag{
+  font-size:12px;
+  letter-spacing:3px;
+  color:var(--accent);
+  margin-bottom:18px;
+}
+
+.audience__header h2{
+  margin-bottom:16px;
+}
+
+.audience__grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+
+.audience__card{
+  background:var(--bg-primary);
+  padding:40px 30px;
+  border-radius:16px;
+  transition:var(--transition);
+}
+
+.audience__card:hover{
+  transform:translateY(-8px);
+}
+
+.audience__card h4{
+  margin-bottom:10px;
+  font-size:20px;
+}

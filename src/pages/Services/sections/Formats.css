@@ -1,0 +1,15 @@
+
+.formats{
+  background:var(--bg-secondary);
+}
+
+.formats__lead{
+  margin:15px auto 50px auto;
+  max-width:600px;
+}
+
+.formats__grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
