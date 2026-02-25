@@ -1,5 +1,6 @@
 import "./HeroSection.css";
 import Button from "../../../components/ui/Button";
+import heroImage from "../../../assets/images/hero.jpeg";
 
 export default function HeroSection(){
   return (
@@ -46,7 +47,7 @@ export default function HeroSection(){
 
         {/* RIGHT IMAGE */}
         <div className="hero__right">
-          <img src="/src/assets/images/hero.jpeg" alt="Yoga therapy"/>
+          <img src={heroImage} alt="Yoga therapy"/>
         </div>
 
       </div>

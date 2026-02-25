@@ -1,6 +1,7 @@
 
 import "./Authority.css";
 import Button from "../../../components/ui/Button";
+import kapilImage from "../../../assets/images/kapil.jpg";
 
 export default function Authority(){
   return (
@@ -60,7 +61,7 @@ export default function Authority(){
 
         {/* RIGHT IMAGE */}
         <div className="authority__right" data-aos="fade-left">
-          <img src="/src/assets/images/kapil.jpg" alt="Kapil Yoga Therapist"/>
+          <img src={kapilImage} alt="Kapil Yoga Therapist"/>
         </div>
 
       </div>

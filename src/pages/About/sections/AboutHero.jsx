@@ -1,5 +1,6 @@
 
 import "./AboutHero.css";
+import kapilImage from "../../../assets/images/kapil.jpg";
 
 export default function AboutHero(){
   return (
@@ -31,7 +32,7 @@ export default function AboutHero(){
         </div>
 
         <div className="about-hero__right">
-          <img src="/src/assets/images/kapil.jpg" alt="Kapil Yoga Therapist"/>
+          <img src={kapilImage} alt="Kapil Yoga Therapist"/>
         </div>
 
       </div>

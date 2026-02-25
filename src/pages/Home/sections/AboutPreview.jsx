@@ -1,6 +1,7 @@
 
 import "./AboutPreview.css";
 import Button from "../../../components/ui/Button";
+import aboutImage from "../../../assets/images/about.jpeg";
 
 export default function AboutPreview(){
   return (
@@ -10,7 +11,7 @@ export default function AboutPreview(){
 
         <div className="about-preview__left" data-aos="fade-right">
           <img 
-            src="/src/assets/images/about.jpeg" 
+            src={aboutImage} 
             alt="Therapeutic Yoga Session"
           />
         </div>
