@@ -33,7 +33,7 @@ export default function HeroSection(){
 
             <Button
               variant="outline"
-              href="https://wa.me/919416514652"
+              href="https://wa.me/918708293816"
             >
               WhatsApp Enquiry
             </Button>

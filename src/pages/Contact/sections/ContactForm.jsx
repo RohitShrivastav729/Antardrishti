@@ -84,7 +84,7 @@ export default function ContactForm(){
             <p>Quickest way to connect for trial sessions.</p>
 
             <a 
-              href="https://wa.me/919416514652"
+              href="https://wa.me/918708293816"
               target="_blank"
               className="whatsapp-btn"
             >
