@@ -1,6 +1,6 @@
 
 import "./AboutAntardrishti.css";
-import aboutImage from "../../../assets/images/antardrishti-space.png";
+import aboutImage from "../../../assets/images/Antardrishti-space.png";
 
 export default function AboutAntardrishti(){
   return (
