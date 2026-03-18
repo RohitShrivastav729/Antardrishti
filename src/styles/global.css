@@ -144,10 +144,6 @@ p {
 
 /* ===== SWIPER FINAL FIX ===== */
 
-.swiper-slide {
-  width: 100% !important;
-}
-
 .swiper-wrapper {
   max-width: 100%;
 }

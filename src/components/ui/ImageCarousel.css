@@ -10,6 +10,11 @@
   height:420px;
 }
 
+/* ONLY HERO FIX */
+.carousel-hero .swiper-slide {
+  width: 100% !important;
+}
+
 /* ABOUT HEIGHT */
 
 .carousel-about{
