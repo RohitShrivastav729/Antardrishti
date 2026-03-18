@@ -1,5 +1,5 @@
 import "./ProgramsHero.css";
-import banner from "../../../assets/images/programs-heros.png"; // 👈 CLEAN image
+import banner from "../../../assets/images/Programs-heros.png"; // 👈 CLEAN image
 
 export default function ProgramsHero(){
   return (
