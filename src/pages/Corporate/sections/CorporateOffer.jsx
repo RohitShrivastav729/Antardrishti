@@ -1,7 +1,37 @@
-
 import "./CorporateOffer.css";
+import onsiteImg from "../../../assets/images/corporate/office-yoga.png";
+import onlineImg from "../../../assets/images/corporate/onlineOffice-yoga.png";
+import workshopImg from "../../../assets/images/corporate/wellness-workshop.png";
+import deskImg from "../../../assets/images/corporate/desk-yoga.png";
+import { useNavigate } from "react-router-dom";
 
 export default function CorporateOffer(){
+
+  const navigate = useNavigate();
+
+  const data = [
+    {
+      title: "On-site Sessions",
+      desc: "Yoga sessions at office locations.",
+      img: onsiteImg,
+    },
+    {
+      title: "Online Corporate Sessions",
+      desc: "Live guided sessions for remote teams.",
+      img: onlineImg,
+    },
+    {
+      title: "Workshops & Wellness Days",
+      desc: "Special sessions for events and retreats.",
+      img: workshopImg,
+    },
+    {
+      title: "Posture & Desk Yoga",
+      desc: "Short routines for daily office wellness.",
+      img: deskImg,
+    },
+  ];
+
   return (
     <section className="corp-offer section-sm">
 
@@ -11,25 +41,22 @@ export default function CorporateOffer(){
 
         <div className="corp-offer__grid">
 
-          <div className="offer-card">
-            <h4>On-site Sessions</h4>
-            <p>Yoga sessions at office locations.</p>
-          </div>
+          {data.map((item, index) => (
+            <div key={index} className="offer-card">
 
-          <div className="offer-card">
-            <h4>Online Corporate Sessions</h4>
-            <p>Live guided sessions for remote teams.</p>
-          </div>
+              <img src={item.img} alt={item.title} />
 
-          <div className="offer-card">
-            <h4>Workshops & Wellness Days</h4>
-            <p>Special sessions for events and retreats.</p>
-          </div>
+              <div className="offer-overlay">
+                <h4>{item.title}</h4>
+                <p>{item.desc}</p>
 
-          <div className="offer-card">
-            <h4>Posture & Desk Yoga</h4>
-            <p>Short routines for daily office wellness.</p>
-          </div>
+                <button onClick={() => navigate("/contact")}>
+                  Enquire Now
+                </button>
+              </div>
+
+            </div>
+          ))}
 
         </div>
 

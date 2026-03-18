@@ -2,54 +2,49 @@ import "./HeroSection.css";
 import Button from "../../../components/ui/Button";
 import heroImage from "../../../assets/images/hero.jpeg";
 
-export default function HeroSection(){
+import ImageCarousel from "../../../components/ui/ImageCarousel";
+
+import img1 from "../../../assets/images/sapna2.jpeg";
+import img2 from "../../../assets/images/sapna3.jpeg";
+import img3 from "../../../assets/images/kapil6.jpeg";
+import img4 from "../../../assets/images/kapil10.jpeg";
+
+const heroImages = [img1, img3, img2, img4];
+
+export default function HeroSection() {
   return (
-    <section className="hero">
-
+    <section className="hero section">
       <div className="container hero__grid">
+        <div className="hero__left">
+          <p className="hero__tag">Inner Vision for Modern Living</p>
 
-        {/* LEFT TEXT */}
-        <div className="hero__left" data-aos="fade-up">
-
-          <p className="hero__tag">
-            INNER VISION FOR MODERN LIVING
-          </p>
-
-          <h1>
-            A Calm Space to Heal,
-            Strengthen and Rebalance
-          </h1>
+          <h1>A Calm Space to Heal, Strengthen and Rebalance</h1>
 
           <p className="hero__desc">
-            Antardrishti is a premium yoga therapy and wellness space 
-            created for modern, demanding lives. Build strength, reduce 
-            stress and restore balance through therapeutic and mindful yoga.
+            Antardrishti is a premium yoga and wellness space designed for
+            modern lifestyles. Build strength, reduce stress and reconnect with
+            yourself through therapeutic yoga.
           </p>
 
           <div className="hero__buttons">
-            <Button href="/contact">
-              Book Trial Session
-            </Button>
+            <a href="/contact" className="btn btn-primary">
+              Book Trial Class
+            </a>
 
-            <Button
-              variant="outline"
-              href="https://wa.me/918708293816"
+            <a
+              href="https://wa.me/919416514652"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary"
             >
               WhatsApp Enquiry
-            </Button>
+            </a>
           </div>
-
-          <p className="hero__location">
-            Noida & Delhi NCR • Online & Offline Sessions
-          </p>
-
         </div>
 
-        {/* RIGHT IMAGE */}
         <div className="hero__right">
-          <img src={heroImage} alt="Yoga therapy"/>
+          <ImageCarousel images={heroImages} variant="hero" />
         </div>
-
       </div>
     </section>
   );

@@ -1,0 +1,24 @@
+.gallery__header{
+  margin-bottom:30px;
+}
+
+.gallery-card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:16px;
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+  .gallery-slider .swiper-slide{
+    width:100%;
+  }
+
+  .gallery-card img{
+    height:240px;
+  }
+
+}

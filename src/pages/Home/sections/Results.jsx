@@ -1,4 +1,3 @@
-
 import "./Results.css";
 
 export default function Results(){
@@ -16,33 +15,63 @@ export default function Results(){
           </h2>
 
           <p>
-            With consistent practice, students begin to experience both
-            physical and mental transformation in a sustainable way.
+            With consistent practice, transformation unfolds gradually —
+            physically, mentally and sustainably.
           </p>
         </div>
 
-        <div className="results__grid">
+        <div className="results__timeline">
 
+          {/* LEFT */}
           <div className="results__col">
-            <h3>Within Weeks</h3>
+
+            <div className="results__badge">Within Weeks</div>
 
             <ul>
-              <li>Better sleep quality</li>
-              <li>Reduced daily stress</li>
-              <li>Improved flexibility</li>
-              <li>Breathing awareness</li>
+              <li>
+                <span>🌙</span>
+                Better sleep quality
+              </li>
+              <li>
+                <span>🧘</span>
+                Reduced daily stress
+              </li>
+              <li>
+                <span>🤸</span>
+                Improved flexibility
+              </li>
+              <li>
+                <span>🌿</span>
+                Breathing awareness
+              </li>
             </ul>
+
           </div>
 
+          {/* RIGHT */}
           <div className="results__col">
-            <h3>With Continued Practice</h3>
+
+            <div className="results__badge">With Continued Practice</div>
 
             <ul>
-              <li>Relief from back & posture pain</li>
-              <li>Healthy weight balance</li>
-              <li>Higher energy levels</li>
-              <li>Mental clarity & discipline</li>
+              <li>
+                <span>💆</span>
+                Relief from back & posture pain
+              </li>
+              <li>
+                <span>⚖️</span>
+                Healthy weight balance
+              </li>
+              <li>
+                <span>⚡</span>
+                Higher energy levels
+              </li>
+              <li>
+                <span>🧠</span>
+                Mental clarity & discipline
+              </li>
             </ul>
+
           </div>
 
         </div>

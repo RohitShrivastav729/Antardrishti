@@ -1,13 +1,34 @@
-import AboutHero from "./sections/AboutHero";
+import AboutAntardrishti from "./sections/AboutAntardrishti";
+import AboutKapil from "./sections/AboutKapil";
+import AboutSapna from "./sections/AboutSapna";
+import ServicesGrid from "../services/sections/ServicesGrid";
+import TrustedBy from "./sections/TrustedBy";
+import FinalCTA from "../Home/sections/FinalCTA";
 import Philosophy from "./sections/Philosophy";
-import Experience from "./sections/Experience";
+import Gallery from "../Home/sections/Gallery";
 
 export default function About(){
-  return (
+
+  return(
     <>
-      <AboutHero/>
+
+      <AboutAntardrishti/>
+
+      <AboutKapil/>
+
+      <AboutSapna/>
+
+      <ServicesGrid/>
+
+      <TrustedBy/>
+
+      <Gallery/>
+
+      <FinalCTA/>
+
       <Philosophy/>
-      <Experience/>
+
     </>
-  );
+  )
+
 }

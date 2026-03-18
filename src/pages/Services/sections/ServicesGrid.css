@@ -1,26 +1,113 @@
-
-.services-grid{
-  background:#fff;
+.services-grid {
+  background: #fff;
 }
 
-.services-grid__wrap{
-  margin-top:60px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
+/* heading */
+.services-grid h2 {
+  margin-bottom: 50px;
 }
 
-.service-card{
-  background:var(--bg-primary);
-  padding:40px 30px;
-  border-radius:18px;
-  transition:var(--transition);
+/* GRID */
+.services-grid__wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-.service-card:hover{
-  transform:translateY(-6px);
+/* CARD */
+.service-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.04),
+    0 8px 20px rgba(0,0,0,0.03);
+
+  transition: all 0.3s ease;
 }
 
-.service-card h3{
-  margin-bottom:12px;
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+/* IMAGE (🔥 FIXED — NO CUTTING) */
+.service-card img {
+  width: 100%;
+  height: auto;        /* 🔥 KEY CHANGE */
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.03); /* subtle zoom (not aggressive) */
+}
+
+/* OVERLAY */
+.service-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  padding: 20px;
+  color: #fff;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.2),
+    transparent
+  );
+}
+
+/* TEXT */
+.service-overlay h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.service-overlay p {
+  font-size: 13px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+/* BUTTON (BOTTOM RIGHT) */
+.service-overlay button {
+  align-self: flex-end;
+  margin-top: 5px;
+
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 13px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-overlay button:hover {
+  transform: scale(1.05);
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .services-grid__wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .services-grid__wrap {
+    grid-template-columns: 1fr;
+  }
 }

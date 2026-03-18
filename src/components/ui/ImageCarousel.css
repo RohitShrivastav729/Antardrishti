@@ -1,0 +1,53 @@
+.carousel-wrapper{
+  width:100%;
+  border-radius: 20px;
+  overflow: hidden; /* 🔥 ensures clipping */
+}
+
+/* HERO HEIGHT */
+
+.carousel-hero{
+  height:420px;
+}
+
+/* ABOUT HEIGHT */
+
+.carousel-about{
+  height:620px;
+}
+
+.carousel-wrapper .swiper{
+  width:100%;
+  height:100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.carousel-wrapper .swiper-slide{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:18px;
+  overflow:hidden  !important;
+}
+
+.carousel-wrapper img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+.carousel-hero{
+  height:300px;
+}
+
+.carousel-about{
+  height:260px;
+}
+
+}

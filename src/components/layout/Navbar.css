@@ -3,9 +3,12 @@
 .navbar {
   position: sticky;
   top: 0;
-  background: var(--bg-primary);
-  border-bottom: 1px solid #eee;
   z-index: 1000;
+
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.75);
+
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 /* inner container */
@@ -13,107 +16,135 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 0;
+  padding: 14px 0;
 }
 
-/* ================= BRAND UNIT ================= */
+/* ================= BRAND ================= */
 
-/* ===== BRAND LOCKUP ===== */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
-.navbar__brand{
-  display:flex;
-  align-items:center;
-  gap:8px;
+  text-decoration: none;
+  color: inherit;
 }
 
-/* icon */
-.brand-logo{
-  height:72px;          /* BIGGER — now matches heading scale */
-  width:auto;
-  display:block;
+.brand-logo {
+  height: 60px;
 }
 
-/* text container */
-.brand-text{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  line-height:1;
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
 }
 
-/* ANTARDRISHTI */
-.brand-name{
-  font-size:24px;
-  font-weight:600;
-  letter-spacing:.5px;
-  color:var(--text-dark);
+.brand-name {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
 
-/* INNER VISION */
-.brand-tag{
-  font-size:11px;
-  letter-spacing:4px;
-  color:var(--accent);
-  margin-top:6px;
+.brand-tag {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--accent);
+  margin-top: 4px;
 }
 
-/* ================= NAV LINKS ================= */
+/* ================= LINKS ================= */
 
 .navbar__links {
   display: flex;
-  gap: 28px;
+  gap: 26px;
   align-items: center;
+}
+
+/* NAV LINKS STYLE */
+.navbar__links a {
+  position: relative;
   font-size: 15px;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* CTA button */
+/* underline animation */
+.navbar__links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+
+  transition: width 0.3s ease;
+}
+
+.navbar__links a:hover::after {
+  width: 100%;
+}
+
+/* ================= CTA ================= */
+
 .navbar__cta {
-  background: var(--gold);
-  color: #fff;
-  padding: 12px 22px;
-  transition: var(--transition);
+  margin-left: 10px;
 }
 
-.navbar__cta:hover {
-  opacity: 0.9;
+/* ================= HAMBURGER ================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
 
-/* hamburger hidden desktop */
-.hamburger{
-  display:none;
-  font-size:28px;
-  cursor:pointer;
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: #333;
+  display: block;
 }
 
-/* ===== MOBILE ===== */
-@media(max-width:768px){
+/* ================= MOBILE ================= */
 
-  .hamburger{
-    display:block;
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
   }
 
-  .navbar__links{
-    position:absolute;
-    top:80px;
-    left:0;
-    right:0;
-    background:#fff;
-    flex-direction:column;
-    align-items:center;
-    gap:20px;
-    padding:30px 0;
-    display:none;
+  .navbar__links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+
+    padding: 30px 0;
+
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+
+    display: none;
   }
 
-  .navbar__links.active{
-    display:flex;
+  .navbar__links.active {
+    display: flex;
   }
 
-  .brand-name{
-    font-size:20px;
+  .brand-logo {
+    height: 50px;
   }
 
-  .brand-logo{
-    height:52px;
+  .brand-name {
+    font-size: 20px;
   }
 }

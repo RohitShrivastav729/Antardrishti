@@ -8,6 +8,7 @@ import About from "./pages/About/About";
 import Services from "./pages/Services/Services";
 import Corporate from "./pages/Corporate/Corporate";
 import Contact from "./pages/Contact/Contact";
+import WhatsAppButton from "./components/ui/WhatsAppButton";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/corporate" element={<Corporate />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-
+      <WhatsAppButton />
       <Footer />
     </BrowserRouter>
   );

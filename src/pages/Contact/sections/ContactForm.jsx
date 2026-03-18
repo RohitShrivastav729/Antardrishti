@@ -1,107 +1,112 @@
 import "./ContactForm.css";
 import Button from "../../../components/ui/Button";
 
-export default function ContactForm(){
-
+export default function ContactForm() {
   return (
     <section className="contact-form section">
-
       <div className="container contact-form__grid">
-
-        {/* FORM */}
+        {/* LEFT SIDE */}
         <div className="contact-form__left">
+          <p className="contact-form__tag">CONTACT US</p>
 
-          <h2>Send an Enquiry</h2>
-          <p>We will respond within 24 hours.</p>
+          <h2>
+            Begin Your Wellness
+            <span> Journey</span>
+          </h2>
 
-          <form 
+          <p className="contact-form__desc">
+            Connect with us to start your yoga journey. Whether you are a
+            beginner or looking for therapeutic guidance, we are here to help
+            you move better, feel better and live better.
+          </p>
+
+          {/* CONTACT INFO */}
+          <div className="contact-info">
+            <div className="contact-info__item">
+              <div className="icon">📍</div>
+              <div>
+                <h4>Our Office</h4>
+                <p>Noida & Delhi NCR</p>
+              </div>
+            </div>
+
+            <div className="contact-info__item">
+              <div className="icon">📞</div>
+              <div>
+                <h4>Call Us</h4>
+                <p>+91 8728233616</p>
+              </div>
+            </div>
+
+            <div className="contact-info__item">
+              <div className="icon">✉️</div>
+              <div>
+                <h4>Email</h4>
+                <p>antardrishti@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          {/* WHATSAPP BUTTON */}
+          <div className="contact-form__actions">
+            <a
+              href="https://wa.me/918728233616"
+              target="_blank"
+              className="whatsapp-btn premium"
+            >
+              <span className="whatsapp-icon">💬</span>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        {/* RIGHT SIDE FORM */}
+        <div className="contact-form__card">
+          <h3>Book a Trial Session</h3>
+
+          <form
             action="https://formsubmit.co/rohitshrivastav628@gmail.com"
             method="POST"
             className="form"
           >
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="New Yoga Enquiry" />
 
-            {/* Disable captcha */}
-            <input type="hidden" name="_captcha" value="false"/>
-            <input type="hidden" name="_subject" value="New Yoga Enquiry"/>
-
-            <input 
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-            />
-
-            <input 
+            <input type="text" name="name" placeholder="Your Name *" required />
+            <input
               type="email"
               name="email"
-              placeholder="Email Address"
+              placeholder="Your Email *"
               required
             />
 
             <div className="phone-group">
-
-              <select name="countryCode" required>
-                <option value="+91">India (+91)</option>
-                <option value="+1">USA (+1)</option>
-                <option value="+44">UK (+44)</option>
-                <option value="+61">Australia (+61)</option>
-                <option value="+64">New Zealand (+64)</option>
-                <option value="+971">UAE (+971)</option>
-                <option value="+65">Singapore (+65)</option>
-                <option value="+81">Japan (+81)</option>
-                <option value="+49">Germany (+49)</option>
-                <option value="+33">France (+33)</option>
+              <select name="countryCode">
+                <option value="+91">+91</option>
+                <option value="+1">+1</option>
               </select>
 
-              <input 
+              <input
                 type="tel"
                 name="phone"
-                placeholder="Phone Number"
+                placeholder="Phone Number *"
                 required
               />
-
             </div>
 
-            <textarea 
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-            />
+            <textarea name="message" placeholder="Your Message" rows="4" />
 
-            <Button>
-              Submit Enquiry
-            </Button>
+            <Button>Send Enquiry</Button>
 
+            {/* SECONDARY CTA */}
+            <div className="form__secondary">
+              <a href="https://wa.me/918728233616" target="_blank">
+                Prefer WhatsApp? Chat instantly →
+              </a>
+            </div>
           </form>
-
         </div>
-
-        {/* RIGHT SIDE */}
-        <div className="contact-form__right">
-
-          <div className="contact-card">
-            <h3>WhatsApp</h3>
-            <p>Quickest way to connect for trial sessions.</p>
-
-            <a 
-              href="https://wa.me/918708293816"
-              target="_blank"
-              className="whatsapp-btn"
-            >
-              Chat on WhatsApp
-            </a>
-          </div>
-
-          <div className="contact-card">
-            <h3>Location</h3>
-            <p>Noida & Delhi NCR</p>
-            <p>Online sessions available across India</p>
-          </div>
-
-        </div>
-
       </div>
-
     </section>
   );
 }

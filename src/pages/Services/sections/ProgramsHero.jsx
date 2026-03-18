@@ -1,17 +1,28 @@
-
 import "./ProgramsHero.css";
+import banner from "../../../assets/images/programs-heros.png"; // 👈 CLEAN image
 
 export default function ProgramsHero(){
   return (
-    <section className="programs-hero section">
+    <section className="programs-hero">
 
-      <div className="container text-center programs-hero__inner">
+      {/* BACKGROUND IMAGE */}
+      <div 
+        className="programs-hero__bg"
+        style={{ backgroundImage: `url(${banner})` }}
+      />
 
-        <p className="programs-hero__tag">PROGRAMS & SESSIONS</p>
+      {/* OVERLAY */}
+      <div className="programs-hero__overlay" />
+
+      {/* CONTENT */}
+      <div className="container programs-hero__inner text-center">
+
+        <p className="programs-hero__tag">
+          PROGRAMS & SESSIONS
+        </p>
 
         <h1>
-          Practical Yoga for
-          Modern Lifestyles
+          Practical Yoga for Modern Lifestyles
         </h1>
 
         <p>

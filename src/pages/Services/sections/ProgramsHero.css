@@ -1,20 +1,126 @@
-
 .programs-hero{
-  background:var(--bg-secondary);
+  position:relative;
+  height:580px; /* balanced height for proper image visibility */
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+  color:#fff;
 }
 
+/* ===== BACKGROUND IMAGE ===== */
+
+.programs-hero__bg{
+  position:absolute;
+  inset:0;
+
+  background-size:cover;          /* premium behavior */
+  background-position:center bottom; /* 🔥 keeps subjects visible */
+  background-repeat:no-repeat;
+
+  transform:scale(1.05); /* prevents edge cut feeling */
+  will-change:transform;
+}
+
+/* ===== SUBTLE PARALLAX (HOVER) ===== */
+
+.programs-hero:hover .programs-hero__bg{
+  transform:scale(1.08);
+  transition:transform 6s ease;
+}
+
+/* ===== OVERLAY ===== */
+
+.programs-hero__overlay{
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.65)
+  );
+
+  z-index:1;
+}
+
+/* ===== CONTENT ===== */
+
 .programs-hero__inner{
+  position:relative;
+  z-index:2;
+
   max-width:760px;
   margin:auto;
 }
 
+/* ===== TAG ===== */
+
 .programs-hero__tag{
   font-size:12px;
   letter-spacing:3px;
-  color:var(--accent);
+  color:#d6d3c8;
   margin-bottom:18px;
+
+  animation:fadeUp 0.8s ease forwards;
 }
 
+/* ===== HEADING ===== */
+
 .programs-hero__inner h1{
+  font-size:48px;
+  line-height:1.2;
   margin-bottom:18px;
+  font-weight:500;
+
+  animation:fadeUp 1s ease forwards;
+}
+
+/* ===== DESCRIPTION ===== */
+
+.programs-hero__inner p{
+  font-size:16px;
+  line-height:1.7;
+  color:#e8e6df;
+
+  animation:fadeUp 1.2s ease forwards;
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:1024px){
+  .programs-hero{
+    height:520px;
+  }
+}
+
+@media(max-width:768px){
+
+  .programs-hero{
+    height:420px;
+    padding:20px;
+  }
+
+  .programs-hero__inner h1{
+    font-size:32px;
+  }
+
+  .programs-hero__inner p{
+    font-size:14px;
+  }
+
 }

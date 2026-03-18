@@ -1,7 +1,44 @@
-
 import "./ServicesGrid.css";
+import { useNavigate } from "react-router-dom";
+
+import onlineImg from "../../../assets/images/onlineSessions.png";
+import offlineImg from "../../../assets/images/offlineStudioSessions.png";
+import homeImg from "../../../assets/images/personalHomeSessions.png";
+import therapyImg from "../../../assets/images/TherapeuticSessions.png";
+import corporateImg from "../../../assets/images/corporateSessions.png";
 
 export default function ServicesGrid(){
+
+  const navigate = useNavigate();
+
+  const services = [
+    {
+      title: "Online Yoga Classes",
+      desc: "Guided sessions from the comfort of your home.",
+      img: onlineImg
+    },
+    {
+      title: "Offline Studio Sessions",
+      desc: "In-person sessions for posture and mobility.",
+      img: offlineImg
+    },
+    {
+      title: "Personal Home Sessions",
+      desc: "One-to-one personalized yoga sessions.",
+      img: homeImg
+    },
+    {
+      title: "Therapeutic Yoga",
+      desc: "Recovery, mobility and pain management.",
+      img: therapyImg
+    },
+    {
+      title: "Corporate Yoga Programs",
+      desc: "Wellness sessions for teams and organizations.",
+      img: corporateImg
+    }
+  ];
+
   return (
     <section className="services-grid section">
 
@@ -11,45 +48,22 @@ export default function ServicesGrid(){
 
         <div className="services-grid__wrap">
 
-          <div className="service-card">
-            <h3>Online Yoga Classes</h3>
-            <p>
-              Guided online sessions for flexibility, strength and stress
-              reduction from the comfort of your home.
-            </p>
-          </div>
+          {services.map((item, index) => (
+            <div key={index} className="service-card">
 
-          <div className="service-card">
-            <h3>Offline Studio Sessions</h3>
-            <p>
-              In-person yoga sessions focused on posture, mobility and
-              therapeutic improvement.
-            </p>
-          </div>
+              <img src={item.img} alt={item.title} />
 
-          <div className="service-card">
-            <h3>Personal Home Sessions</h3>
-            <p>
-              One-to-one sessions tailored to your health goals and physical
-              condition.
-            </p>
-          </div>
+              <div className="service-overlay">
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
 
-          <div className="service-card">
-            <h3>Therapeutic Yoga</h3>
-            <p>
-              Specialized sessions for back pain, stiffness, recovery and
-              long-term mobility.
-            </p>
-          </div>
+                <button onClick={() => navigate("/contact")}>
+                  Enquire Now
+                </button>
+              </div>
 
-          <div className="service-card">
-            <h3>Corporate Yoga Programs</h3>
-            <p>
-              Structured wellness sessions designed for teams, posture health
-              and stress management.
-            </p>
-          </div>
+            </div>
+          ))}
 
         </div>
 
